@@ -1,9 +1,9 @@
-import { NewsArticleSummary, NewsData } from "@/types";
+import { NewsData } from "@/types";
 import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
 import { useEffect, useState } from "react";
 import ArticleSummary from "../modal/ArticleSummary";
 
-function classNames(...classes: any) {
+function classNames(...classes: Array<string>) {
   return classes.filter(Boolean).join(" ");
 }
 
@@ -30,7 +30,7 @@ export default function NewsProviderList(props: NewsProviderListProps) {
     if (!openSummaryModal) {
       setSummarizedArticleUrl("");
     }
-  }, [openSummaryModal])
+  }, [openSummaryModal]);
 
   return (
     <div>
