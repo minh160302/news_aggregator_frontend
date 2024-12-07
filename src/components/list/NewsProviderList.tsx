@@ -80,7 +80,7 @@ export default function NewsProviderList(props: NewsProviderListProps) {
         <div>
           News Provider: {providerVisible}
           <ul role="list" className="divide-y divide-gray-100">
-            {data[providerVisible].map((item) => (
+            {data[providerVisible]?.map((item) => (
               <li key={item.title} className="flex gap-x-4 py-5 ">
                 {/* <img alt="" src={person.imageUrl} className="size-12 flex-none rounded-full bg-gray-50" /> */}
                 <button

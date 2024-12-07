@@ -61,7 +61,7 @@ export default function ArticleSummary({
                   Article Summary
                 </DialogTitle>
                 <div className="mt-2">
-                  <p className="text-sm text-gray-500">{content}</p>
+                  <p className="text-left text-sm text-gray-500">{content}</p>
                 </div>
               </div>
             </div>

@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
-const BASE_URL = "https://web-9aiae8u36ob8.up-de-fra1-k8s-1.apps.run-on-seenode.com";
-// const BASE_URL = "http://127.0.0.1:8000";
+// const BASE_URL = "https://web-9aiae8u36ob8.up-de-fra1-k8s-1.apps.run-on-seenode.com";
+const BASE_URL = "http://127.0.0.1:8000";
 // const BASE_URL = process.env.BASE_URL;
 
 // Axios Interceptor Instance

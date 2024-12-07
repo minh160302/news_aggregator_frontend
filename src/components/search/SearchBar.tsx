@@ -6,6 +6,7 @@ import {
   ChangeEventHandler,
   Dispatch,
   FormEventHandler,
+  RefObject,
   SetStateAction,
   useState,
 } from "react";
@@ -14,10 +15,10 @@ interface SearchBarProps {
   input: string;
   setInput: Dispatch<SetStateAction<string>>;
   setNewsData: Dispatch<SetStateAction<NewsData>>;
+  formRef: RefObject<HTMLFormElement>;
 }
 
-function SearchBar(props: SearchBarProps) {
-  const { input, setInput, setNewsData } = props;
+function SearchBar({ input, setInput, setNewsData, formRef }: SearchBarProps) {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
@@ -51,8 +52,8 @@ function SearchBar(props: SearchBarProps) {
         Quick search
       </label>
       <div className="mt-2">
-        <div className="flex rounded-md bg-white outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
-          <form action="submit" onSubmit={handleSubmitForm}>
+        <div className="flex justify-between rounded-md bg-white outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
+          <form ref={formRef} action="submit" onSubmit={handleSubmitForm}>
             <input
               id="search"
               name="search"
